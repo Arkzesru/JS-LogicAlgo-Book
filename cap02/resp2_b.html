@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2.b</title>
+
+    <style>
+        /* Remove as setas de aumento/diminuição */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+      </style>
+</head>
+
+<body>
+    <h1>Ark - Lan House Aeroporto - Programa em JS-HTML</h1>
+    <form>
+        <p>Custo por cada 15min conectado R$:
+            <input type="number" id="inValor" min="0" step="0.01" required>
+        </p>
+        <p>Tempo de Conexão do usuário (min):
+        <input type="number" id="inTempo" min="0" step="0.01" required>
+        </p>
+        <p>
+        <input type="submit" value="Calcular valor a pagar">
+        </p>
+    </form>
+    <h3></h3>
+    <script src="js/resp2_b.js"></script>
+</body>
+
+</html>

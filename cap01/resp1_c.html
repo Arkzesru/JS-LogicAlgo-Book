@@ -1,0 +1,8 @@
+<meta charset="UTF-8">
+<script>
+    // Program that calculates and informs the payment options in a store.
+    const price = Number(prompt(`Product Price $: `));
+    const installment = price / 3;
+    const cash = price - (price * 0.10);
+    alert(`Cash Price: $ ${cash.toFixed(2)}\nOr 3 installments without interest of: $ ${installment.toFixed(2)}`);
+</script>

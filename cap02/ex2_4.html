@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2.4</title>
+
+    <style>
+        /* Remove as setas de aumento/diminuição */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Ark Restaurante: Programa em JS-HTML </h1>
+    <form> 
+        <p> Buffet por KG R$:
+        <input type="Number" id="inQuilo" step="0.01" min="0" pattern="[0-9]+([,\.][0-9]+)?" required>
+        </p>
+    
+        <p> Consumo do Cliente (g):
+        <input type="number" id="inConsumo" min="0" required>
+        </p>
+
+        <input type="submit" value="Calcular Preço">
+    </form>
+    <h3></h3>
+    <script src="js/ex2_4.js"></script>
+</body>
+
+</html>
