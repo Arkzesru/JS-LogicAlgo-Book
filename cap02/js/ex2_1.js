@@ -1,11 +1,12 @@
-// cria uma referência ao form e ao elemento h3 (onde será exibida a resposta)
-const frm = document.querySelector("form")
-const resp = document.querySelector("h3")
+// create a reference to the form and the h3 element (where the response will be displayed).
+const frm = document.querySelector("form");
+const resp = document.querySelector("h3");
 
-// cria um "ouvinte" de evento, acionado quando o botão submit for clicado
+// create an event listener triggered when the submit button is clicked.
 frm.addEventListener("submit", (e) => {
-    const nome = frm.inNome.value // obtém o nome digitado no form
-    resp.innerText = `Olá ${nome}` // exibe a resposta do programa
+    
+    const name = frm.inName.value; // get the name entered in the form.
+    resp.innerText = `Hello, ${name}!`; // display the program's response.
 
-        e.preventDefault() // evita envio do form
+        e.preventDefault() // prevent form submission.
 })
