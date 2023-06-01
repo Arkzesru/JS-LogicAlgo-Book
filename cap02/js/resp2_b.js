@@ -1,40 +1,40 @@
-// cria referência aos elementos da página
+// Create references to the elements on the page.
 const frm = document.querySelector("form")
 const resp = document.querySelector("h3")
 
-// Evita o aumentar/diminuir com as teclas do teclado.
-document.getElementById('inValor').addEventListener('keydown', function(event) {
+// Prevent increase/decrease with keyboard keys.
+document.getElementById('inCost').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-document.getElementById('inTempo').addEventListener('keydown', function(event) {
+document.getElementById('inTime').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-// Evita o aumentar/diminuir com o rolar do scroll do mouse.
-document.getElementById('inValor').addEventListener('wheel', function(event) {
+// Prevent increase/decrease with mouse scroll.
+document.getElementById('inCost').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-document.getElementById('inTempo').addEventListener('wheel', function(event) {
+document.getElementById('inTime').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-// cria um "ouvinte" de evento, acionado quando o botão submit for clicado
+// Create an event listener triggered when the submit button is clicked.
 frm.addEventListener("submit", (e) => {
-    //obtém conteúdo (e converte em número)
-    const valor = Number(frm.inValor.value)
-    const tempo = Number(frm.inTempo.value)
+    // Get the content (and convert it to a number).
+    const cost = Number(frm.inCost.value);
+    const time = Number(frm.inTime.value);
 
-    // calcula valor a pagar (arredonda pra cima)
-    const pagar = Math.ceil(tempo / 15) * valor
+    // Calculate the amount to be paid (rounding up).
+    const paymentAmount = Math.ceil(time / 15) * cost;
 
-    // exibe valor a pagar (com 2 decimais)
-    resp.innerText = `Valor a ser pago pelo usuário R$: ${pagar.toFixed(2)}`
+    // Display the amount (with 2 decimal places).
+    resp.innerText = `Amount to be paid by the user $${paymentAmount.toFixed(2)}`
         
         e.preventDefault()
 })

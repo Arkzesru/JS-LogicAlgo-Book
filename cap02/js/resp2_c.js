@@ -1,30 +1,30 @@
-// cria referência aos elementos da página
+// Create references to the elements on the page.
 const frm = document.querySelector("form")
-const resp1 = document.querySelector("#outPromocao")
-const resp2 = document.querySelector("#outPrecoTerceiro")
+const resp1 = document.querySelector("#outPromotion")
+const resp2 = document.querySelector("#outThirdPartyPrice")
 
-// Evita o aumentar/diminuir com as teclas do teclado.
-document.getElementById('inPreco').addEventListener('keydown', function(event) {
+// Prevent increase/decrease with keyboard keys.
+document.getElementById('inPrice').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
     });
 
-// Evita o aumentar/diminuir com o rolar do scroll do mouse.
-document.getElementById('inPreco').addEventListener('wheel', function(event) {
+// Prevent increase/decrease with mouse scroll.
+document.getElementById('inPrice').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-// cria um "ouvinte" de evento, acionado quando o botão submit for clicado
+// Create an event listener triggered when the submit button is clicked.
 frm.addEventListener("submit", (e) => {
-    const produto = frm.inProduto.value
-    const preco = Number(frm.inPreco.value)
+    const product = frm.inProduct.value
+    const price = Number(frm.inPrice.value)
 
-    const terceiro = preco * 0.5
-    const total = (preco * 2) + terceiro
+    const third = price * 0.5
+    const total = (price * 2) + third
 
-    resp1.innerText = `${produto} - Promoção: Leve 3 por ${total.toFixed(2)}`
-    resp2.innerText = `Você paga apenas R$ ${terceiro.toFixed(2)} na 3º unidade do produto.`
+    resp1.innerText = `${product} - Promotion: Buy 3 for ${total.toFixed(2)}`
+    resp2.innerText = `You only pay $ ${third.toFixed(2)} for the 3rd unit of the product.`
 
         e.preventDefault()
 });

@@ -1,32 +1,32 @@
-// cria referência aos elementos da página
+// Create references to the elements on the page.
 const frm = document.querySelector("form")
-const resp1 = document.querySelector("#outMedicamento")
-const resp2 = document.querySelector("#outPromocao")
+const resp1 = document.querySelector("#outMedicine")
+const resp2 = document.querySelector("#outPromotion")
 
 
-// Evita o aumentar/diminuir com as teclas do teclado.
-document.getElementById('inPreco').addEventListener('keydown', function(event) {
+// Prevent increase/decrease using keyboard keys.
+document.getElementById('inPrice').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-// Evita o aumentar/diminuir com o rolar do scroll do mouse.
-document.getElementById('inPreco').addEventListener('wheel', function(event) {
+// Prevent increase/decrease using mouse scroll.
+document.getElementById('inPrice').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-// cria um "ouvinte" de evento, acionado quando o botão submit for clicado
+// Create an event listener triggered when the submit button is clicked.
 frm.addEventListener("submit", (e) => {
-    const medicamento = frm.inMedicamento.value
-    const preco = Number(frm.inPreco.value)
+    const medicine = frm.inMedicine.value
+    const price = Number(frm.inPrice.value)
 
-// calcula valor da promoção (arredonda para baixo)
-    const promocao = Math.floor(preco * 2)
+// Calculate the promotion value (round down).
+    const promotion = Math.floor(price * 2)
 
 // exibe as respostas
-    resp1.innerText = `Promoção de ${medicamento}`
-    resp2.innerText = `Leve 2 por apenas R$: ${promocao.toFixed(2)}`
+    resp1.innerText = `Promotion of ${medicine}`
+    resp2.innerText = `Get 2 for only $: ${promotion.toFixed(2)}`
 
         e.preventDefault()
 })

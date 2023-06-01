@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 2.c</title>
+    <title>Exercise 2.c</title>
 
     <style>
-        /* Remove as setas de aumento/diminuição */
+        /* Remove increase/decrease arrows */
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
           -webkit-appearance: none;
@@ -21,25 +21,25 @@
 </head>
 
 <body>
-    <h1>Ark Supermercado: Programa em JS-HTML</h1>
+    <h1>Ark Supermarket: JS-HTML Program</h1>
 
       <form>
         <p>
-            Produto:
-            <input type="text" id="inProduto" required>
+            Product:
+            <input type="text" id="inProduct" required>
         </p>
 
         <p>
-            Preço R$:
-            <input type="number" min="0" step="0.01" id="inPreco" required>
+            Price $:
+            <input type="number" min="0" step="0.01" id="inPrice" required>
         </p>
 
         <p>
-            <input type="submit" value="Ver Promoção">
+            <input type="submit" value="Show Promotion">
         </p>
       </form>
-    <h3 id="outPromocao"></h3>
-    <h3 id="outPrecoTerceiro"></h3>
+    <h3 id="outPromotion"></h3>
+    <h3 id="outThirdPartyPrice"></h3>
     
     <script src="js/resp2_c.js"></script>
 </body>
