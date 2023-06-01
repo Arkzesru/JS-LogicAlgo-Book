@@ -1,37 +1,37 @@
-// cria referência ao form e aos elementos de resposta (pelo seu id)
+// Create references to the form and response elements (using their id)
 const frm = document.querySelector("form")
 const resp1 = document.querySelector("h3")
 
-// Evita o aumentar/diminuir com as teclas do teclado.
-document.getElementById('inQuilo').addEventListener('keydown', function(event) {
+// Prevent arrow keys from triggering increase/decrease
+document.getElementById('inKilogram').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-document.getElementById('inConsumo').addEventListener('keydown', function(event) {
+document.getElementById('inConsumption').addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-// Evita o aumentar/diminuir com o rolar do scroll do mouse.
-document.getElementById('inQuilo').addEventListener('wheel', function(event) {
+// Prevent mouse scroll from triggering increase/decrease
+document.getElementById('inKilogram').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-document.getElementById('inConsumo').addEventListener('wheel', function(event) {
+document.getElementById('inConsumption').addEventListener('wheel', function(event) {
     event.preventDefault();
 });
 
-// cria um "ouvinte" de evento, acionado quando o botão submit for clicado
+// Create an event listener triggered when the submit button is clicked
 frm.addEventListener("submit", (e) => {
-    const quilo = Number(frm.inQuilo.value) // obtém o conteúdo dos campos
-    const consumo = Number(frm.inConsumo.value)
+    const kilogram = Number(frm.inKilogram.value) // Get the content of the fields.
+    const consumption = Number(frm.inConsumption.value)
 
-    const valor = (quilo / 1000) * consumo // calcula o valor a ser pago.
+    const amountToPay = (kilogram / 1000) * consumption // Calculate the amount to be paid.
 
-    resp1.innerText = `Valor a pagar R$: ${valor.toFixed(2)}`
+    resp1.innerText = `Amount to pay: $${amountToPay.toFixed(2)}`
 
-        e.preventDefault() // evita o envio do form
+        e.preventDefault() // Prevent form submission.
 })
