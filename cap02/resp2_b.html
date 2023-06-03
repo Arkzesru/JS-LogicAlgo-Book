@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 2.b</title>
 
     <style>
-        /* Remove increase/decrease arrows */
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-        input[type="number"] {
-          -moz-appearance: textfield;
-        }
-      </style>
-</head>
+      /* Remove increase/decrease arrows */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
-<body>
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+
+  <body>
     <h1>Ark - Airport Lan House - JS-HTML Program</h1>
     <form>
-        <p>Cost per every 15 minutes connected $:
-            <input type="number" id="inCost" min="0" step="0.01" required>
-        </p>
-        <p>User Connection Time (minutes):
-        <input type="number" id="inTime" min="0" step="0.01" required>
-        </p>
-        <p>
-        <input type="submit" value="Calculate Amount">
-        </p>
+      <p>
+        Cost per every 15 minutes connected $:
+        <input type="number" id="inCost" min="0" step="0.01" required />
+      </p>
+      <p>
+        User Connection Time (minutes):
+        <input type="number" id="inTime" min="0" step="0.01" required />
+      </p>
+      <p>
+        <input type="submit" value="Calculate Amount" />
+      </p>
     </form>
     <h3></h3>
     <script src="js/resp2_b.js"></script>
-</body>
-
+  </body>
 </html>

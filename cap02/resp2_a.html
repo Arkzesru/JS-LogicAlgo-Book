@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 2.a</title>
 
     <style>
@@ -18,24 +17,32 @@
         -moz-appearance: textfield;
       }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Ark Pharmacy: JS-HTML Progam</h1>
     <form>
-      <p>Medicine:
-        <input type="text" id="inMedicine" required>
-      </p>
-      <p>Price $:
-        <input type="number" min="0" step="0.01" patterns="[0-9]+([,\.][0-9]+)?" id="inPrice" required>
+      <p>
+        Medicine:
+        <input type="text" id="inMedicine" required />
       </p>
       <p>
-      <input type="submit" value="Show Promotion">
+        Price $:
+        <input
+          type="number"
+          min="0"
+          step="0.01"
+          patterns="[0-9]+([,\.][0-9]+)?"
+          id="inPrice"
+          required
+        />
+      </p>
+      <p>
+        <input type="submit" value="Show Promotion" />
       </p>
     </form>
     <h3 id="outMedicine"></h3>
     <h3 id="outPromotion"></h3>
     <script src="js/resp2_a.js"></script>
   </body>
-
 </html>

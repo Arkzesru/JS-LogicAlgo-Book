@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Example 2.2</title>
 
     <style>
-        /* Remove the increase/decrease arrows */
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-        input[type="number"] {
-          -moz-appearance: textfield;
-        }
+      /* Remove the increase/decrease arrows */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>CineArk: JS-HTML Program for Movies Now Showing</h1>
     <form>
-        <p> Movie Title:
-            <input type="text" id="inMovie" required>
-        </p>
+      <p>
+        Movie Title:
+        <input type="text" id="inMovie" required />
+      </p>
 
-        <p> Duration (min):
-            <input type="number" id="inDuration" required>
-            
-        </p>
-            <input type="submit" value="Convert to Hours and Minutes">
+      <p>
+        Duration (min):
+        <input type="number" id="inDuration" required />
+      </p>
+      <input type="submit" value="Convert to Hours and Minutes" />
     </form>
     <h2></h2>
     <h3></h3>
     <script src="js/ex2_2.js"></script>
-</body>
-
+  </body>
 </html>

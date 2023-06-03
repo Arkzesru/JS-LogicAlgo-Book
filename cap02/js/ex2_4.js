@@ -3,24 +3,24 @@ const frm = document.querySelector("form")
 const resp1 = document.querySelector("h3")
 
 // Prevent arrow keys from triggering increase/decrease
-document.getElementById('inKilogram').addEventListener('keydown', function(event) {
+document.getElementById('inKilogram').addEventListener('keydown', function (event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
-document.getElementById('inConsumption').addEventListener('keydown', function(event) {
+document.getElementById('inConsumption').addEventListener('keydown', function (event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
 });
 
 // Prevent mouse scroll from triggering increase/decrease
-document.getElementById('inKilogram').addEventListener('wheel', function(event) {
+document.getElementById('inKilogram').addEventListener('wheel', function (event) {
     event.preventDefault();
 });
 
-document.getElementById('inConsumption').addEventListener('wheel', function(event) {
+document.getElementById('inConsumption').addEventListener('wheel', function (event) {
     event.preventDefault();
 });
 
@@ -33,5 +33,5 @@ frm.addEventListener("submit", (e) => {
 
     resp1.innerText = `Amount to pay: $${amountToPay.toFixed(2)}`
 
-        e.preventDefault() // Prevent form submission.
+    e.preventDefault() // Prevent form submission.
 })

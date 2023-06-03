@@ -3,9 +3,9 @@ const frm = document.querySelector("form")
 const resp1 = document.querySelector("h2")
 const resp2 = document.querySelector("h3")
 
- /* Add a key event listener (keydown) to the numeric input element
-    and prevent the default behavior (increase or decrease) */
-document.getElementById('inDuration').addEventListener('keydown', function(event) {
+/* Add a key event listener (keydown) to the numeric input element
+   and prevent the default behavior (increase or decrease) */
+document.getElementById('inDuration').addEventListener('keydown', function (event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
@@ -18,7 +18,7 @@ frm.addEventListener("submit", (e) => {
 
     const hours = Math.floor(duration / 60) // get only the integer part of the division, rouding down the result
     const minutes = duration % 60 // get the remainder of the division (the minutes)
-    
+
     resp1.innerText = `${movie}`
     resp2.innerText = `Duration: ${hours}h${String(minutes).padStart(2, '0')}min`
 

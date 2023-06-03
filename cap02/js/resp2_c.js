@@ -4,14 +4,14 @@ const resp1 = document.querySelector("#outPromotion")
 const resp2 = document.querySelector("#outThirdPartyPrice")
 
 // Prevent increase/decrease with keyboard keys.
-document.getElementById('inPrice').addEventListener('keydown', function(event) {
+document.getElementById('inPrice').addEventListener('keydown', function (event) {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault();
     }
-    });
+});
 
 // Prevent increase/decrease with mouse scroll.
-document.getElementById('inPrice').addEventListener('wheel', function(event) {
+document.getElementById('inPrice').addEventListener('wheel', function (event) {
     event.preventDefault();
 });
 
@@ -26,5 +26,5 @@ frm.addEventListener("submit", (e) => {
     resp1.innerText = `${product} - Promotion: Buy 3 for ${total.toFixed(2)}`
     resp2.innerText = `You only pay $ ${third.toFixed(2)} for the 3rd unit of the product.`
 
-        e.preventDefault()
+    e.preventDefault()
 });

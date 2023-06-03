@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 2.4</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example 2.4</title>
+    <style>
+      /* Remove the increase/decrease arrows */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
-  <style>
-    /* Remove the increase/decrease arrows */
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
 
-    input[type="number"] {
-      -moz-appearance: textfield;
-    }
-  </style>
-</head>
+  <body>
+    <h1>Ark Restaurant: JS-HTML Pogram</h1>
+    <form>
+      <p>
+        Buffet per KG $:
+        <input
+          type="Number"
+          id="inKilogram"
+          step="0.01"
+          min="0"
+          pattern="[0-9]+([,\.][0-9]+)?"
+          required
+        />
+      </p>
 
-<body>
-  <h1>Ark Restaurant: JS-HTML Pogram</h1>
-  <form>
-    <p> Buffet per KG $:
-      <input type="Number" id="inKilogram" step="0.01" min="0" pattern="[0-9]+([,\.][0-9]+)?" required>
-    </p>
+      <p>
+        Costurmer's Consumption (g):
+        <input type="number" id="inConsumption" min="0" required />
+      </p>
 
-    <p> Costurmer's Consumption (g):
-      <input type="number" id="inConsumption" min="0" required>
-    </p>
-
-    <input type="submit" value="Calculate Price">
-  </form>
-  <h3></h3>
-  <script src="js/ex2_4.js"></script>
-</body>
-
+      <input type="submit" value="Calculate Price" />
+    </form>
+    <h3></h3>
+    <script src="js/ex2_4.js"></script>
+  </body>
 </html>
