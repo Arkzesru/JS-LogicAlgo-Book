@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4.1</title>
+
+    <style>
+      /* Remove the increase/decrease arrows */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ark - Student Situation - JS-HTML Program</h1>
+    <form>
+      <p>
+        Student Name:
+        <input type="text" id="inName" required />
+      </p>
+
+      <p>
+        1st Grade:
+        <input
+          type="number"
+          id="inFirstGrade"
+          step="0.1"
+          min="0"
+          max="10"
+          required
+        />
+      </p>
+
+      <p>
+        2nd Grade:
+        <input
+          type="number"
+          id="inSecondGrade"
+          step="0.1"
+          min="0"
+          max="10"
+          required
+        />
+      </p>
+
+      <p>
+        <input type="submit" value="Display Average and Situation" />
+      </p>
+    </form>
+    <h3 id="outAverage"></h3>
+    <h4 id="outSituation"></h4>
+
+    <script src="js/ex4_1.js"></script>
+  </body>
+</html>
