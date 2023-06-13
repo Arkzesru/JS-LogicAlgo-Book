@@ -16,6 +16,9 @@ frm.addEventListener("submit", (e) => {
     if (average >= 7.0) {
         resp2.innerText = `Congratulations ${name}! You have been approved!`
         resp2.style.color = "blue";
+    } else if (average >=4) {
+        resp2.innerText = `Warning ${name}!! You're in an exam!`
+        resp2.style.color = "green";
     } else {
         resp2.innerText = `Oops ${name}! You have been failed :(`
         resp2.style.color = "red";
